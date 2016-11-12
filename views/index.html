@@ -1,0 +1,46 @@
+$def with(values)
+<!doctype html>
+<html>
+   <head>
+       <meta charset="UTF-8"/>
+      <title>PGR --PERSONAS INDIGENAS INTERNAS POR GENERO--</title>
+   </head>
+   <body>
+       <h3>Esta webapp muestra dos tablas una de hombres y una de mujeres, para el numero de hombres y mujeres por estado que estan inernos</h3>
+       <p></p>
+           <table border="5" bordercolor="black" align="center" cellpadding = 5>
+            <thead>
+                <tr>
+                    <th>Entidad</th>
+                    <th>Hombres</th>
+                </tr>
+            </thead>
+            <tbody>
+                    $for entidad,numero in values[0].items(): 
+                        <tr>
+                            <td >$entidad</td>
+                            <td align = center>$numero</td>
+                        </tr>
+                    
+            </tbody>
+            </table>
+            <p></p>
+           <table border="5" bordercolor="black" align="center" cellpadding = 5>
+            <thead>
+                <tr>
+                    <th>Entidad</th>
+                    <th>Mujeres</th>
+                </tr>
+            </thead>
+            <tbody>
+                    $for entidad,numero in values[1].items(): 
+                        <tr>
+                            <td >$entidad</td>
+                            <td align = center>$numero</td>
+                        </tr>
+                    
+            </tbody>
+           </table>
+        </font>
+   </body>
+</html>
